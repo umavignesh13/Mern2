@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #cccccc;
+    --accent-color: #ff6f61; /* Bright accent color */
+    --accent-color-dark: #d9534f; /* Darker shade for hover */
+    --background-color: #121212; /* Dark background for better contrast */
+    --card-background-color: #1e1e1e; /* Slightly lighter card background */
+    --nav-background-color: #1a1a1a; /* Darker navigation bar */
+    --input-background-color: #333333; /* Input field background */
+    --input-border-color: #565656; /* Input field border */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.6rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Utility class */
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 20px;
+    overflow: hidden;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 12px;
+}
+
+.company-logo img {
+    width: 70px;
+}
+
+.nav-links ul {
+    gap: 30px;
+}
+
+.hover-link {
+    cursor: pointer;
+    color: var(--primary-text-color);
+}
+
+.hover-link:hover {
+    color: var(--accent-color);
+}
+
+.hover-link:active {
+    color: var(--accent-color-dark);
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--accent-color); /* Underline active item */
+}
+
+.search-bar {
+    height: 36px;
+    gap: 10px;
+}
+
+.news-input {
+    width: 220px;
+    height: 100%;
+    padding-inline: 14px;
+    border-radius: 6px;
+    border: 2px solid var(--input-border-color);
+    background-color: var(--input-background-color);
+    color: var(--primary-text-color);
+    font-family: "Roboto", sans-serif;
+}
+
+.news-input::placeholder {
+    color: #aaaaaa;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 28px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+main {
+    padding-block: 24px;
+    margin-top: 120px;
+}
+
+.card-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    align-items: start;
+}
+
+.card {
+    width: 350px;
+    min-height: 420px;
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: var(--card-background-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    color: var(--primary-text-color);
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+}
+
+.card-header img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.news-source {
+    margin-block: 16px;
+    color: var(--secondary-text-color);
+}
